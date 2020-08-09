@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avto Moto</title>
+    <link rel="icon" href="pic/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img src="pic/logo.svg" class="logo" alt="logo" />
+          <div class="text">
+            <span class="text__logo text__logo--avto">avto</span>
+            <span class="text__logo text__logo--moto">moto</span>
+          </div>
+        </div>
+        <div class="nav nav__wrapper">
+          <nav class="nav__menu">
+            <ul class="nav__list">
+              <li><a href="#">Автомобили</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Спортивные автомобили</h1>
+      <div class="main__wrapper">
+        <section class="photo__car">
+          <div class="photo__car__main">
+            <img src="pic/black-1-min.jpg" alt="cabrio" />
+            <div class="pic__overlay">
+              <p class="pic__overlay__text">new model</p>
+            </div>
+          </div>
+          <div class="carousel__wrapper">
+            <div class="button__prew">
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#48494d"
+              >
+                <path
+                  d="M1.00427 10.1719L6.91841 4.3686M1.00427 10.1719L6.69294 15.9692M1.00427 10.1719L19.9813 10.3513"
+                />
+              </svg>
+            </div>
+            <div class="carousel__items">
+              <div class="carousel__item carousel__item1">
+                <img src="pic/black-1-min.jpg" alt="" />
+              </div>
+              <div class="carousel__item carousel__item2">
+                <img src="pic/desktop_slide_2.jpg" alt="" />
+              </div>
+              <div class="carousel__item carousel__item3">
+                <img src="pic/desktop_slide_3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="button__next">
+              <svg
+                width="20"
+                height="13"
+                viewBox="0 0 20 13"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#48494d"
+              >
+                <path
+                  d="M18.9873 6.17188L13.0747 0.368597M18.9873 6.17188L13.3001 11.9692M18.9873 6.17188L0.0150977 6.35128"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="car__description">
+          <h2 class="car__title">Марпех 11</h2>
+          <div class="tech__wrapper">
+            <div class="tech__item">
+              <img src="pic/engine_type.svg" alt="" class="tech__icon" />
+              <p class="tech__text">бензин</p>
+            </div>
+            <div class="tech__item">
+              <img src="pic/transmission.svg" alt="" class="tech__icon" />
+              <p class="tech__text">механика</p>
+            </div>
+            <div class="tech__item">
+              <img src="pic/horse_pow.svg" alt="" class="tech__icon" />
+              <p class="tech__text">100 л. с.</p>
+            </div>
+            <div class="tech__item">
+              <img src="pic/volume.svg" alt="" class="tech__icon" />
+              <p class="tech__text">1.4 л</p>
+            </div>
+          </div>
+          <div class="price__wrapper">
+            <p class="newprice">2 300 000 &#x20bd;</p>
+            <p class="oldprice">2 400 000 &#x20bd;</p>
+          </div>
+          <div class="buttons">
+            <a href="#" class="button button__app">оставить заявку</a>
+            <a href="#" class="button button__credit"
+              >в кредит от 11 000 &#x20bd;</a
+            >
+          </div>
+        </section>
+      </div>
+
+      <section class="low-block">
+        <div class="car-about">
+          <button type="button" class="car-about__button car-about__button_1">
+            Xарактеристики
+          </button>
+          <button type="button" class="car-about__button car-about__button_2">
+            Отзывы
+          </button>
+          <button type="button" class="car-about__button car-about__button_3">
+            Контакты
+          </button>
+        </div>
+
+        <div class="car-block car-block1">
+          <div class="car-block1__elem">
+            <p class="car-block__elem__text">Трансмиссия</p>
+            <p class="car-block__elem__text">Роботизированная</p>
+          </div>
+          <div class="car-block1__elem">
+            <p class="car-block__elem__text">Мощность двигателя, л.с.</p>
+            <p class="car-block__elem__text">249</p>
+          </div>
+          <div class="car-block1__elem">
+            <p class="car-block__elem__text">Тип двигателя</p>
+            <p class="car-block__elem__text">Бензиновый</p>
+          </div>
+          <div class="car-block1__elem">
+            <p class="car-block__elem__text">Привод</p>
+            <p class="car-block__elem__text">Полный</p>
+          </div>
+          <div class="car-block1__elem">
+            <p class="car-block__elem__text">Объем двигателя, л</p>
+            <p class="car-block__elem__text">2.4</p>
+          </div>
+          <div class="car-block1__elem">
+            <p class="car-block__elem__text">Макс. крутящий момент</p>
+            <p class="car-block__elem__text">370/4500</p>
+          </div>
+          <div class="car-block1__elem">
+            <p class="car-block__elem__text">Количество цилиндров</p>
+            <p class="car-block__elem__text">4</p>
+          </div>
+        </div>
+
+        <div class="car-block car-block2 hidden">
+          <div class="car-block2__feedback1">
+            <h3>Борис Иванов</h3>
+            <button type="button" class="button__init">оставить отзыв</button>
+            <div class="car-block2__advantages">
+              <h4>Достоинства</h4>
+              <p class="car-block2__text car-block2__text_1">
+                мощность, внешний вид
+              </p>
+            </div>
+            <div class="car-block2__limitations">
+              <h4>Недостатки</h4>
+              <p class="car-block2__text car-block2__text_1">
+                Слабые тормозные колодки (пришлось заменить)
+              </p>
+            </div>
+            <div class="car-block2__comments">
+              <h4>Комментарий</h4>
+              <p class="car-block2__text">
+                Взяли по трейд-ин, на выгодных условиях у дилера. Стильная
+                внешка и крут по базовым характеристикам. Не думал, что пересяду
+                на китайский автопром, но сейчас гоняю и понимаю, что полностью
+                доволен.
+              </p>
+            </div>
+            <div class="car-block2__advise">
+              <div class="stars">
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+              </div>
+              <span>Советует</span>
+            </div>
+            <div class="car-block2__responce">
+              <span class="time">1 минуту назад</span>
+              <span class="responce">Ответить</span>
+            </div>
+          </div>
+          <div class="car-block2__feedback1">
+            <h3>Марсель Исмагилов</h3>
+            <div class="car-block2__advantages">
+              <h4>Достоинства</h4>
+              <p class="car-block2__text car-block2__text_1">
+                Cтиль, комфорт, управляемость
+              </p>
+            </div>
+            <div class="car-block2__limitations">
+              <h4>Недостатки</h4>
+              <p class="car-block2__text car-block2__text_1">
+                Дорогой ремонт и обслуживание
+              </p>
+            </div>
+            <div class="car-block2__comments">
+              <h4>Комментарий</h4>
+              <p class="car-block2__text">
+                Дизайн отличный, управление просто шикарно, ощущения за рулём
+                такой машины особые. Но ремонт очень дорогой. Пару месяцев назад
+                пришлось менять двигатель. По стоимости вышло как новый
+                автомобиль. Так что, если покупать эту машину, надо быть готовым
+                к большим расходам на обслуживание.
+              </p>
+            </div>
+            <div class="car-block2__advise">
+              <div class="stars">
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="rgba(189, 190, 194, 0.7)"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+                  />
+                </svg>
+              </div>
+              <span>Советует</span>
+            </div>
+            <div class="car-block2__responce">
+              <span class="time">1 минуту назад</span>
+              <span class="responce">Ответить</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-block car-block3 hidden">
+          <div class="car-block3__text">
+            <div class="address">
+              <h5>Адрес</h5>
+              <p>Санкт-Петербург,</p>
+              <p>набережная реки Карповки, дом 5</p>
+            </div>
+            <div class="shop-hours">
+              <h5>Режим работы</h5>
+              <p>Ежедневно, с 10:00 до 21:00</p>
+            </div>
+            <div class="phone">
+              <h5>Телефон</h5>
+              <a href="tel:+8 (800) 333-55-99">8 (800) 333-55-99</a>
+            </div>
+            <div class="e-mail">
+              <h5>E-mail</h5>
+              <a href="mailto:info@avto-moto.ru">info@avto-moto.ru</a>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bfd838fe87af51ad2a351340c3eac053786aa2fa422762c453f7e7999639385&amp;source=constructor"
+              width="431"
+              height="271"
+              frameborder="0"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="w-modal hidden">
+      <div class="w-modal__popup">
+        <form action="#">
+          <h2>Оставить отзыв</h2>
+          <span class="close"></span>
+          <div class="form-group">
+            <div class="form-group__left">
+              <div class="field-wrap">
+                <label class="req" for="user_name"> </label>
+                <input
+                  type="text"
+                  minlength="2"
+                  maxlength="25"
+                  name="user_name"
+                  class="setup-user-name"
+                  placeholder="Имя"
+                  required
+                />
+              </div>
+
+              <input
+                type="text"
+                placeholder="Достоинства"
+                class="popup__advantages"
+              />
+              <input
+                type="text"
+                placeholder="Недостатки"
+                class="popup__limitation"
+              />
+            </div>
+            <div class="form-group__right">
+              <div class="form-group__right__value">
+                <span class="good-value">Оцените товар:</span>
+                <div class="stars good-value__stars">
+                  <svg
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="#BDBEC2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z"
+                      fill-opacity="0.7"
+                    />
+                  </svg>
+                  <svg
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="#BDBEC2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z"
+                      fill-opacity="0.7"
+                    />
+                  </svg>
+                  <svg
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="#BDBEC2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z"
+                      fill-opacity="0.7"
+                    />
+                  </svg>
+                  <svg
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="#BDBEC2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z"
+                      fill-opacity="0.7"
+                    />
+                  </svg>
+                  <svg
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="#BDBEC2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z"
+                      fill-opacity="0.7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="field-wrap">
+                <label class="req" for="comments"></label>
+                <textarea
+                  type="text"
+                  name="comments"
+                  id="text-area"
+                  placeholder="Комментарии"
+                  class="popup__comments"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <button class="feedback-btn">оставить отзыв</button>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <ul class="footer__wrapper__list">
+          <li><a href="#">Корпоративным клиентам</a></li>
+          <li><a href="#">Клиентам</a></li>
+          <li><a href="#">Аренда авто</a></li>
+          <li><a href="#">Каршеринг</a></li>
+          <li><a href="#">Как продать авто</a></li>
+          <li><a href="#">Trade-in</a></li>
+          <li><a href="#">Test-drive</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <template class="template__feedback">
+      <div class="car-block2__feedback1 template__element">
+        <h3 class="template__name"></h3>
+        <a href="#" class="car-about__button button__init">Оставить отзыв</a>
+        <div class="car-block2__advantages">
+          <h4>Достоинства</h4>
+          <p
+            class="car-block2__text car-block2__text_1 template__advantages"
+          ></p>
+        </div>
+        <div class="car-block2__limitations">
+          <h4>Недостатки</h4>
+          <p
+            class="car-block2__text car-block2__text_1 template__limitations"
+          ></p>
+        </div>
+        <div class="car-block2__comments">
+          <h4>Комментарий</h4>
+          <p class="car-block2__text template__comments"></p>
+        </div>
+        <div class="car-block2__advise">
+          <div class="stars">
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="rgba(189, 190, 194, 0.7)"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+              />
+            </svg>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="rgba(189, 190, 194, 0.7)"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+              />
+            </svg>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="rgba(189, 190, 194, 0.7)"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+              />
+            </svg>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="rgba(189, 190, 194, 0.7)"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+              />
+            </svg>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="rgba(189, 190, 194, 0.7)"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z"
+              />
+            </svg>
+          </div>
+          <span>Советует</span>
+        </div>
+        <div class="car-block2__responce">
+          <span class="time">1 минуту назад</span>
+          <span class="responce">Ответить</span>
+        </div>
+      </div>
+    </template>
+    <template>
+      <div class="block">
+        какой то див
+      </div>
+    </template>
+    <script src="js/main.js"></script>
+  </body>
+</html>
