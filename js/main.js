@@ -34,10 +34,11 @@
     lowBlock.style.height = "650px";
   });
 
-  var body = document.querySelector("body");
   button4.addEventListener("click", function () {
+    var body = document.querySelector("body");
     popup.classList.remove("hidden");
-    body.style.overflow = "hidden";
+    carBlock2.style.display = "block";
+    body.classList.add("disable-scroll");
   });
 })();
 
@@ -59,7 +60,7 @@
   }
 })();
 
-// ------------попап--------------------
+// ------------попап закрытие--------------------
 
 (function () {
   var popup = document.querySelector(".w-modal");
@@ -132,24 +133,6 @@ var popupComments = popup.querySelector(".popup__comments");
 
 // ----------------------------
 
-(function () {
-  var sendler = buttonFeedback.addEventListener("click", function () {
-    carBlock2.appendChild(cloneElement);
-    popup.classList.remove("hidden");
-    templateButton.style.display = "none";
-    lowBlock.style.height = "1260px";
-    templateName.textContent = setupUserName.value;
-    templateAdvantages.textContent = popupAdvantages.value;
-    templatLimitations.textContent = popupLimitation.value;
-    templateComments.textContent = popupComments.value;
-
-    if (!setupUserName.value) {
-      sendler = false;
-      setupUserName.style.background = "red";
-      popupComments.style.background = "red";
-    }
-  });
-})();
 
 // ------сохранение полей попапа в localstorage------------
 
@@ -174,3 +157,30 @@ var popupComments = popup.querySelector(".popup__comments");
     localStorage.setItem("popupComments", popupComments.value);
   });
 })();
+
+
+(function () {
+
+  var sendler = buttonFeedback.addEventListener("click", function () {
+    var body = document.querySelector("body");
+    
+    popup.classList.add("hidden");
+    body.classList.remove("disable-scroll");
+    lowBlock.style.height = "1260px";
+    templateName.textContent = setupUserName.value;
+    templateAdvantages.textContent = popupAdvantages.value;
+    templatLimitations.textContent = popupLimitation.value;
+    templateComments.textContent = popupComments.value;
+    
+    if (!setupUserName.value && !popupComments.value) {
+      sendler = false;
+      setupUserName.style.background = "red";
+      popupComments.style.background = "red";
+      carBlock2.removeChild(cloneElement);
+    }
+    else {
+      carBlock2.appendChild(cloneElement);
+    }
+  });
+})();
+

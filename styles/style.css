@@ -553,6 +553,12 @@ a:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+}
+
 .w-modal__popup {
   position: absolute;
   width: 698px;
