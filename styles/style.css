@@ -72,6 +72,7 @@
   display: flex;
   width: 559px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .nav__list li {
@@ -751,11 +752,14 @@ label.req:after {
   display: flex;
   width: 1158px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer__wrapper__list li {
   list-style: none;
   letter-spacing: 0.03em;
   margin-right: -17px;
+  padding-left: 7px;
+ padding-right: 7px;
 }
 
 .footer__wrapper__list li a {
