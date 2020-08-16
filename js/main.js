@@ -109,6 +109,50 @@
   buttonPrew.addEventListener("click", onClickButtonPrew);
 })();
 
+
+
+// ----------стрелки слайдера-------------------
+var arrowLeft = document.querySelector('.arrow-left');
+var arrowRight = document.querySelector('.arrow-right');
+var carouselItems = document.querySelectorAll(".carousel__item");
+var activeSlide = 0;
+
+var onClickButtonNext = function () {
+   if (activeSlide < 2) {
+    activeSlide++;
+    arrowLeft.classList.add('svg-enable');
+    arrowLeft.classList.remove('svg-disable');
+  }
+
+  
+  if (activeSlide === 2) {
+    arrowRight.classList.remove('svg-enable');
+    arrowRight.classList.add('svg-disable');
+  }
+  bigPicture.querySelector('img').src = carouselItems[activeSlide].querySelector('img').src;
+}
+
+
+var onClickButtonPrew = function () {
+  if (activeSlide > 0) {
+    activeSlide--;
+    arrowRight.classList.add('svg-enable');  //   правая стрелка яркая
+    arrowRight.classList.remove('svg-disable');
+  }
+  
+  //  если активный слайд  крайний левый    -  делаем левую стрелку бледной
+  if (activeSlide === 0) {
+    arrowLeft.classList.remove('svg-enable');
+    arrowLeft.classList.add('svg-disable');
+  }
+  bigPicture.querySelector('img').src = carouselItems[activeSlide].querySelector('img').src;
+}
+
+// -----------------------------------------------------------
+
+
+
+
 // ------------Добавление отзывов из формы на страницу------------------------
 var popup = document.querySelector(".w-modal");
 var carBlock2 = document.querySelector(".car-block2");
