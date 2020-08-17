@@ -178,53 +178,41 @@ var popupComments = popup.querySelector(".popup__comments");
 // ----------------------------
 
 
-// ------сохранение полей попапа в localstorage------------
+// --------попап, localStorage, вывод на страницу---------------------
 
-(function () {
-  setupUserName.value = localStorage.getItem("setupUserName");
+setupUserName.value = localStorage.getItem("setupUserName"); 
   setupUserName.addEventListener("input", function () {
     localStorage.setItem("setupUserName", setupUserName.value);
-  });
-
-  popupAdvantages.value = localStorage.getItem("popupAdvantages");
-  popupAdvantages.addEventListener("input", function () {
-    localStorage.setItem("popupAdvantages", popupAdvantages.value);
-  });
-
-  popupLimitation.value = localStorage.getItem("popupLimitation");
-  popupLimitation.addEventListener("input", function () {
-    localStorage.setItem("popupLimitation", popupLimitation.value);
-  });
-
-  popupComments.value = localStorage.getItem("popupComments");
-  popupComments.addEventListener("input", function () {
-    localStorage.setItem("popupComments", popupComments.value);
-  });
-})();
-
-
-(function () {
-
-  var sendler = buttonFeedback.addEventListener("click", function () {
+  })
+   
+  buttonFeedback.addEventListener("click", function (evt) {
+    evt.preventDefault();    
     var body = document.querySelector("body");
-    
-    popup.classList.add("hidden");
-    body.classList.remove("disable-scroll");
-    lowBlock.style.height = "1260px";
-    templateName.textContent = setupUserName.value;
-    templateAdvantages.textContent = popupAdvantages.value;
-    templatLimitations.textContent = popupLimitation.value;
-    templateComments.textContent = popupComments.value;
-    
     if (!setupUserName.value && !popupComments.value) {
-      sendler = false;
+     
       setupUserName.style.background = "red";
       popupComments.style.background = "red";
-      carBlock2.removeChild(cloneElement);
-    }
+      
+    } 
     else {
+     
+      localStorage.setItem("setupUserName", setupUserName.value);
+      localStorage.setItem("popupAdvantages", popupAdvantages.value);
+      localStorage.setItem("popupLimitation", popupLimitation.value);
+      localStorage.setItem("popupComments", popupComments.value);
+      popup.classList.add("hidden");
+      body.classList.remove("disable-scroll");
+      lowBlock.style.height = "1260px";
+     
+      templateName.textContent = setupUserName.value;
+      templateAdvantages.textContent = popupAdvantages.value;
+      templatLimitations.textContent = popupLimitation.value;
+      templateComments.textContent = popupComments.value;
       carBlock2.appendChild(cloneElement);
     }
-  });
-})();
+  }); 
+
+
+
+
 
