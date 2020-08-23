@@ -678,6 +678,10 @@ h2 {
   margin-top: -5px;
 }
 
+.active {
+  fill: #d12136;
+}
+
 .form-group__left input {
   outline: none;
 }

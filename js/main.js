@@ -1,16 +1,16 @@
 "use strict";
+var button1 = document.querySelector(".car-about__button_1");
+var button2 = document.querySelector(".car-about__button_2");
+var button3 = document.querySelector(".car-about__button_3");
 
+var button4 = document.querySelector(".button__init");
+
+var carBlock1 = document.querySelector(".car-block1");
+var carBlock2 = document.querySelector(".car-block2");
+var carBlock3 = document.querySelector(".car-block3");
 //  ---------------табы вкл/выкл-------------
 (function () {
-  var button1 = document.querySelector(".car-about__button_1");
-  var button2 = document.querySelector(".car-about__button_2");
-  var button3 = document.querySelector(".car-about__button_3");
 
-  var button4 = document.querySelector(".button__init");
-
-  var carBlock1 = document.querySelector(".car-block1");
-  var carBlock2 = document.querySelector(".car-block2");
-  var carBlock3 = document.querySelector(".car-block3");
 
   button1.addEventListener("click", function () {
     carBlock1.classList.remove("hidden");
@@ -193,7 +193,16 @@ setupUserName.value = localStorage.getItem("setupUserName");
       setupUserName.style.background = "red";
       popupComments.style.background = "red";
       
-    } 
+    }  
+    else if (!setupUserName.value) {
+     setupUserName.style.background = "red";
+
+    }
+      else if (!popupComments.value) {
+       popupComments.style.background = "red";
+
+    }
+
     else {
      
       localStorage.setItem("setupUserName", setupUserName.value);
@@ -203,16 +212,24 @@ setupUserName.value = localStorage.getItem("setupUserName");
       popup.classList.add("hidden");
       body.classList.remove("disable-scroll");
       lowBlock.style.height = "1260px";
-     
+      
       templateName.textContent = setupUserName.value;
       templateAdvantages.textContent = popupAdvantages.value;
       templatLimitations.textContent = popupLimitation.value;
       templateComments.textContent = popupComments.value;
       carBlock2.appendChild(cloneElement);
+      
     }
   }); 
+  
+// ------------звездный рейтинг--------------
 
+var parentItems = document.querySelector('.stars');
+var star=document.querySelectorAll('.star');
+var activeStar = document.querySelectorAll('.star.active').length;
 
-
-
-
+for (var i =0; i>=star.length; i++){
+  star.addEventListener('click', function(){
+    star.classList.add('active');
+  });
+}
