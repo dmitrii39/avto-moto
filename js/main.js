@@ -76,6 +76,11 @@ var carBlock3 = document.querySelector(".car-block3");
       popup.classList.add("hidden");
     }
   });
+
+  popup.addEventListener("click", function () {
+    popup.classList.add("hidden");
+  });
+
 })();
 
 // -------------слайдер---------------
