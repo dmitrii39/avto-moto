@@ -77,10 +77,6 @@ var carBlock3 = document.querySelector(".car-block3");
     }
   });
 
-  popup.addEventListener("click", function () {
-    popup.classList.add("hidden");
-  });
-
 })();
 
 // -------------слайдер---------------
@@ -92,70 +88,47 @@ var carBlock3 = document.querySelector(".car-block3");
 
   var activeSlide = 0;
 
+  // ----------стрелки слайдера-------------------
+  var arrowLeft = document.querySelector('.arrow-left');
+  var arrowRight = document.querySelector('.arrow-right');
+
   var onClickButtonNext = function () {
     if (activeSlide < 2) {
       activeSlide++;
+      arrowLeft.classList.add('svg-enable');
+      arrowLeft.classList.remove('svg-disable');
     }
-    bigPicture.querySelector("img").src = carouselItems[
-      activeSlide
-    ].querySelector("img").src;
+    if (activeSlide === 2) {
+      arrowRight.classList.remove('svg-enable');
+      arrowRight.classList.add('svg-disable');
+    }
+    bigPicture.querySelector("img").src = carouselItems[activeSlide].querySelector("img").src;
   };
+
+
+
 
   var onClickButtonPrew = function () {
     if (activeSlide > 0) {
       activeSlide--;
+      arrowRight.classList.add('svg-enable');  //   правая стрелка яркая
+      arrowRight.classList.remove('svg-disable');
     }
-    bigPicture.querySelector("img").src = carouselItems[
-      activeSlide
-    ].querySelector("img").src;
+    if (activeSlide === 0) {
+      arrowLeft.classList.remove('svg-enable');
+      arrowLeft.classList.add('svg-disable');
+    }
+    bigPicture.querySelector("img").src = carouselItems[activeSlide].querySelector("img").src;
   };
-
   buttonNext.addEventListener("click", onClickButtonNext);
   buttonPrew.addEventListener("click", onClickButtonPrew);
 })();
 
 
 
-// ----------стрелки слайдера-------------------
-var arrowLeft = document.querySelector('.arrow-left');
-var arrowRight = document.querySelector('.arrow-right');
-var carouselItems = document.querySelectorAll(".carousel__item");
-var activeSlide = 0;
 
-var onClickButtonNext = function () {
-   if (activeSlide < 2) {
-    activeSlide++;
-    arrowLeft.classList.add('svg-enable');
-    arrowLeft.classList.remove('svg-disable');
-  }
-
-  
-  if (activeSlide === 2) {
-    arrowRight.classList.remove('svg-enable');
-    arrowRight.classList.add('svg-disable');
-  }
-  bigPicture.querySelector('img').src = carouselItems[activeSlide].querySelector('img').src;
-}
-
-
-var onClickButtonPrew = function () {
-  if (activeSlide > 0) {
-    activeSlide--;
-    arrowRight.classList.add('svg-enable');  //   правая стрелка яркая
-    arrowRight.classList.remove('svg-disable');
-  }
-  
-  //  если активный слайд  крайний левый    -  делаем левую стрелку бледной
-  if (activeSlide === 0) {
-    arrowLeft.classList.remove('svg-enable');
-    arrowLeft.classList.add('svg-disable');
-  }
-  bigPicture.querySelector('img').src = carouselItems[activeSlide].querySelector('img').src;
-}
 
 // -----------------------------------------------------------
-
-
 
 
 // ------------Добавление отзывов из формы на страницу------------------------
@@ -181,6 +154,25 @@ var popupLimitation = popup.querySelector(".popup__limitation");
 var popupComments = popup.querySelector(".popup__comments");
 
 // ----------------------------
+
+var parentItems = document.querySelector('.starsFeedBack');
+var starsSvg = parentItems.querySelectorAll('svg');
+var activeStar = document.querySelectorAll('.star.active').length;
+for (var i = 0; i < starsSvg.length; i++) {
+  starsSvg[i].addEventListener('click', function (evt) {
+    evt.currentTarget.classList.add('active');
+  });
+}
+
+starsSvg.forEach(function (it) {
+  it.addEventListener('click', function () {
+    it.classList.add('active');
+  });
+});
+
+
+
+
 
 
 // --------попап, localStorage, вывод на страницу---------------------
@@ -227,14 +219,4 @@ setupUserName.value = localStorage.getItem("setupUserName");
     }
   }); 
   
-// ------------звездный рейтинг--------------
 
-var parentItems = document.querySelector('.stars');
-var star=document.querySelectorAll('.star');
-var activeStar = document.querySelectorAll('.star.active').length;
-
-for (var i =0; i>=star.length; i++){
-  star.addEventListener('click', function(){
-    star.classList.add('active');
-  });
-}
