@@ -139,7 +139,7 @@ var templateFeedback = document.querySelector(".template__feedback").content;
 var element = templateFeedback.querySelector(".template__element");
 var cloneElement = element.cloneNode(true);
 
-var feedbackStar = element.querySelectorAll('svg').length;
+
 
 
 // ---------------dom-узлы темплейта---------------
@@ -164,18 +164,19 @@ var starsSvg = parentItems.querySelectorAll('svg');
 for (var i = 0; i < starsSvg.length; i++) {
   starsSvg[i].addEventListener('click', function (evt) {
     evt.currentTarget.classList.add('active');
+    // var activeStar = document.querySelectorAll('.star.active').length;
+    // var feedbackStar = element.querySelectorAll('svg').
+  
   });
+  
 }
-var activeStar = document.querySelectorAll('.star.active').length;
-console.log(activeStar);
-
-// ----переменные и функция для переноса звездного рейтинга в отзыв---
-
 
 // -------------------------------------------
 
 
 // --------попап, localStorage, вывод на страницу---------------------
+var activeStar = document.querySelectorAll('.star.active').length;
+var feedbackStar = element.querySelectorAll('svg').length;
 
 setupUserName.value = localStorage.getItem("setupUserName"); 
   setupUserName.addEventListener("input", function () {
@@ -214,8 +215,7 @@ setupUserName.value = localStorage.getItem("setupUserName");
       templateAdvantages.textContent = popupAdvantages.value;
       templatLimitations.textContent = popupLimitation.value;
       templateComments.textContent = popupComments.value;
-      
-    //  activeStar = feedbackStar;
+   
       
       carBlock2.appendChild(cloneElement);
       
