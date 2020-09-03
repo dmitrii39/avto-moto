@@ -124,10 +124,6 @@ var carBlock3 = document.querySelector(".car-block3");
   buttonPrew.addEventListener("click", onClickButtonPrew);
 })();
 
-
-
-
-
 // -----------------------------------------------------------
 
 
@@ -138,9 +134,6 @@ var lowBlock = document.querySelector(".low-block");
 var templateFeedback = document.querySelector(".template__feedback").content;
 var element = templateFeedback.querySelector(".template__element");
 var cloneElement = element.cloneNode(true);
-
-
-
 
 // ---------------dom-узлы темплейта---------------
 
@@ -164,8 +157,6 @@ var starsSvg = parentItems.querySelectorAll('svg');
 for (var i = 0; i < starsSvg.length; i++) {
   starsSvg[i].addEventListener('click', function (evt) {
     evt.currentTarget.classList.add('active');
-    // var activeStar = document.querySelectorAll('.star.active').length;
-    // var feedbackStar = element.querySelectorAll('svg').
   
   });
   
@@ -173,10 +164,9 @@ for (var i = 0; i < starsSvg.length; i++) {
 
 // -------------------------------------------
 
-
 // --------попап, localStorage, вывод на страницу---------------------
-var activeStar = document.querySelectorAll('.star.active').length;
-var feedbackStar = element.querySelectorAll('svg').length;
+// var activeStars = document.querySelectorAll('.star.active').length;
+// var feedBackStars = cloneElement.querySelectorAll('svg');
 
 setupUserName.value = localStorage.getItem("setupUserName"); 
   setupUserName.addEventListener("input", function () {
@@ -215,7 +205,16 @@ setupUserName.value = localStorage.getItem("setupUserName");
       templateAdvantages.textContent = popupAdvantages.value;
       templatLimitations.textContent = popupLimitation.value;
       templateComments.textContent = popupComments.value;
-   
+
+
+      var feedBackStars = cloneElement.querySelectorAll('svg');
+      var activeStars = parentItems.querySelectorAll('.star.active').length;
+
+      if (activeStars > 0) {
+        for (var i = 0; i < activeStars; i++) {
+          feedBackStars[i].classList.add('active');
+        }
+      }
       
       carBlock2.appendChild(cloneElement);
       
