@@ -17,14 +17,15 @@ var carBlock3 = document.querySelector(".car-block3");
     carBlock3.classList.add("hidden");
     carBlock2.classList.add("hidden");
 
-    lowBlock.style.height = "900px";
+    lowBlock.style.height = "600px";
   });
 
   button2.addEventListener("click", function () {
     carBlock2.classList.remove("hidden");
+    
     carBlock1.classList.add("hidden");
     carBlock3.classList.add("hidden");
-    lowBlock.style.height = "900px";
+    lowBlock.style.height = "1200px";
   });
 
   button3.addEventListener("click", function () {
@@ -37,28 +38,14 @@ var carBlock3 = document.querySelector(".car-block3");
   button4.addEventListener("click", function () {
     var body = document.querySelector("body");
     popup.classList.remove("hidden");
-    carBlock2.style.display = "block";
+    
     body.classList.add("disable-scroll");
   });
 })();
 
-// ---------------убрать табы по нажатию--------
 
-(function () {
-  var carBlock = document.querySelectorAll(".car-block");
 
-  var removeClickListener = function (onCarBlockClick) {
-    onCarBlockClick.addEventListener("click", function () {
-      onCarBlockClick.classList.add("hidden");
-    });
-  };
 
-  for (var i = 0; i < carBlock.length; i++) {
-    var onCarBlockClick = carBlock[i];
-
-    removeClickListener(onCarBlockClick);
-  }
-})();
 
 // ------------попап закрытие--------------------
 
@@ -165,8 +152,6 @@ for (var i = 0; i < starsSvg.length; i++) {
 // -------------------------------------------
 
 // --------попап, localStorage, вывод на страницу---------------------
-// var activeStars = document.querySelectorAll('.star.active').length;
-// var feedBackStars = cloneElement.querySelectorAll('svg');
 
 setupUserName.value = localStorage.getItem("setupUserName"); 
   setupUserName.addEventListener("input", function () {
@@ -220,5 +205,25 @@ setupUserName.value = localStorage.getItem("setupUserName");
       
     }
   }); 
-  
+
+
+  // ---------------убрать табы по нажатию--------
+
+// (function () {
+//   var carBlock = document.querySelectorAll(".car-block");
+
+//   var removeClickListener = function (onCarBlockClick) {
+//     onCarBlockClick.addEventListener("click", function () {
+//       onCarBlockClick.classList.add("hidden");
+      
+//     });
+//   };
+
+//   for (var i = 0; i < carBlock.length; i++) {
+//     var onCarBlockClick = carBlock[i];
+
+//     removeClickListener(onCarBlockClick);
+//   }
+// })();
+
 
