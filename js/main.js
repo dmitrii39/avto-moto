@@ -163,9 +163,9 @@ setupUserName.value = localStorage.getItem("setupUserName");
     var body = document.querySelector("body");
     if (!setupUserName.value && !popupComments.value) {
      
-      setupUserName.style.background = "red";
-      popupComments.style.background = "red";
-      
+      // setupUserName.style.background = "red";
+      // popupComments.style.background = "red";
+      popup.classList.add("hidden");
     }  
     else if (!setupUserName.value) {
      setupUserName.style.background = "red";
