@@ -686,9 +686,9 @@ h2 {
   outline: none;
 }
 
-.form-group__left input:invalid {
+/* .form-group__left input:invalid {
   border-color: red;
-}
+} */
 
 #text-area {
   width: 300px;
@@ -704,10 +704,25 @@ h2 {
 #text-area:hover {
   border: 1px solid #0000ff;
 }
-
+/* 
 #text-area:invalid {
   border-color: red;
+} */
+
+.field-wrap__notice, .field-wrap__notice_right {
+position: absolute;
+display: none;
+font-size: 14px;
+line-height: 19px;
+font-family: "OpenSans-Regular";
+color: #FF0000;
+bottom: 54px;
+
+  }
+.field-wrap__notice_right {
+  bottom: 114px;
 }
+
 
 .good-value__stars svg {
   margin-left: 5px;

@@ -1,4 +1,4 @@
-"use strict";
+
 var button1 = document.querySelector(".car-about__button_1");
 var button2 = document.querySelector(".car-about__button_2");
 var button3 = document.querySelector(".car-about__button_3");
@@ -25,7 +25,7 @@ var carBlock3 = document.querySelector(".car-block3");
     
     carBlock1.classList.add("hidden");
     carBlock3.classList.add("hidden");
-    lowBlock.style.height = "1200px";
+    lowBlock.style.height = "900px";
   });
 
   button3.addEventListener("click", function () {
@@ -42,8 +42,6 @@ var carBlock3 = document.querySelector(".car-block3");
     body.classList.add("disable-scroll");
   });
 })();
-
-
 
 
 
@@ -152,6 +150,8 @@ for (var i = 0; i < starsSvg.length; i++) {
 // -------------------------------------------
 
 // --------попап, localStorage, вывод на страницу---------------------
+var fieldNotice = document.querySelector('.field-wrap__notice');
+var commentNotice = document.querySelector('.field-wrap__notice_right');
 
 setupUserName.value = localStorage.getItem("setupUserName"); 
   setupUserName.addEventListener("input", function () {
@@ -162,48 +162,54 @@ setupUserName.value = localStorage.getItem("setupUserName");
     evt.preventDefault();    
     var body = document.querySelector("body");
     if (!setupUserName.value && !popupComments.value) {
-     
-      // setupUserName.style.background = "red";
-      // popupComments.style.background = "red";
-      popup.classList.add("hidden");
-    }  
-    else if (!setupUserName.value) {
-     setupUserName.style.background = "red";
-
-    }
-      else if (!popupComments.value) {
-       popupComments.style.background = "red";
-
-    }
-
-    else {
-     
-      localStorage.setItem("setupUserName", setupUserName.value);
-      localStorage.setItem("popupAdvantages", popupAdvantages.value);
-      localStorage.setItem("popupLimitation", popupLimitation.value);
-      localStorage.setItem("popupComments", popupComments.value);
+   
       popup.classList.add("hidden");
       body.classList.remove("disable-scroll");
-      lowBlock.style.height = "1260px";
-      
-      templateName.textContent = setupUserName.value;
-      templateAdvantages.textContent = popupAdvantages.value;
-      templatLimitations.textContent = popupLimitation.value;
-      templateComments.textContent = popupComments.value;
-
-
-      var feedBackStars = cloneElement.querySelectorAll('svg');
-      var activeStars = parentItems.querySelectorAll('.star.active').length;
-
-      if (activeStars > 0) {
-        for (var i = 0; i < activeStars; i++) {
-          feedBackStars[i].classList.add('active');
-        }
-      }
-      
-      carBlock2.appendChild(cloneElement);
-      
+    }  
+    else if (!setupUserName.value) {
+     setupUserName.style.border = "1px solid red";
+     fieldNotice.style.display='block';
     }
+      else if (!popupComments.value) {
+       popupComments.style.border = "1px solid red";
+       commentNotice.style.display = "block";
+
+    }
+  else if (!popupComments.value) {
+    popupComments.style.border = "1px solid red";
+    commentNotice.style.display = "block";
+  } 
+  
+  
+  else {
+    popupComments.style.border = "1px solid rgba(72, 73, 77, 0.2)";
+    setupUserName.style.border = "1px solid rgba(72, 73, 77, 0.2)";
+    fieldNotice.style.display = "none";
+    commentNotice.style.display = "none";
+    localStorage.setItem("setupUserName", setupUserName.value);
+    localStorage.setItem("popupAdvantages", popupAdvantages.value);
+    localStorage.setItem("popupLimitation", popupLimitation.value);
+    localStorage.setItem("popupComments", popupComments.value);
+    popup.classList.add("hidden");
+    body.classList.remove("disable-scroll");
+    lowBlock.style.height = "1260px";
+
+    templateName.textContent = setupUserName.value;
+    templateAdvantages.textContent = popupAdvantages.value;
+    templatLimitations.textContent = popupLimitation.value;
+    templateComments.textContent = popupComments.value;
+
+    var feedBackStars = cloneElement.querySelectorAll("svg");
+    var activeStars = parentItems.querySelectorAll(".star.active").length;
+
+    if (activeStars > 0) {
+      for (var i = 0; i < activeStars; i++) {
+        feedBackStars[i].classList.add("active");
+      }
+    }
+
+    carBlock2.appendChild(cloneElement);
+  }
   }); 
 
 

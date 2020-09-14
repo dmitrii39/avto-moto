@@ -49,7 +49,7 @@
               width="21" height="21" 
               viewBox="0 0 21 21" 
               xmlns="http://www.w3.org/2000/svg">
-              >
+              
                 <path
                   d="M1.00427 10.1719L6.91841 4.3686M1.00427 10.1719L6.69294 15.9692M1.00427 10.1719L19.9813 10.3513"
                 />
@@ -362,9 +362,7 @@
             <iframe
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bfd838fe87af51ad2a351340c3eac053786aa2fa422762c453f7e7999639385&amp;source=constructor"
               width="431"
-              height="271"
-              frameborder="0"
-            >
+              height="271" >
             </iframe>
           </div>
         </div>
@@ -374,10 +372,11 @@
       <div class="w-modal__popup">
         <form action="#">
           <h2>Оставить отзыв</h2>
-          <span class="close"></span>
+          <span class="close" tabindex="0"></span>
           <div class="form-group">
             <div class="form-group__left">
               <div class="field-wrap">
+                <p class="field-wrap__notice">Пожалуйста, заполните поле</p>
                 <label class="req" id="user_name" for="user_name"> </label>
                 <input
                   type="text"
@@ -468,6 +467,7 @@
                 </div>
               </div>
               <div class="field-wrap">
+                <p class="field-wrap__notice_right">Пожалуйста, заполните поле</p>
                 <label class="req" id="comments" for="comments"></label>
                 <textarea
                  
