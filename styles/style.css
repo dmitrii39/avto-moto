@@ -71,12 +71,13 @@
 .nav__list {
   display: flex;
   width: 559px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 
 .nav__list li {
   list-style: none;
+  margin-left: 51px;
 }
 
 .nav__list li a {
@@ -788,6 +789,7 @@ label.req:after {
 .footer__wrapper__list li {
   list-style: none;
   letter-spacing: 0.03em;
+margin-left: 50px;
   margin-right: -17px;
   padding-left: 7px;
  padding-right: 7px;

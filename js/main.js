@@ -4,7 +4,7 @@ var button2 = document.querySelector(".car-about__button_2");
 var button3 = document.querySelector(".car-about__button_3");
 
 var button4 = document.querySelector(".button__init");
-
+var body = document.querySelector("body");
 var carBlock1 = document.querySelector(".car-block1");
 var carBlock2 = document.querySelector(".car-block2");
 var carBlock3 = document.querySelector(".car-block3");
@@ -36,7 +36,7 @@ var carBlock3 = document.querySelector(".car-block3");
   });
 
   button4.addEventListener("click", function () {
-    var body = document.querySelector("body");
+    
     popup.classList.remove("hidden");
     
     body.classList.add("disable-scroll");
@@ -54,11 +54,13 @@ var carBlock3 = document.querySelector(".car-block3");
 
   closeButton.addEventListener("click", function () {
     popup.classList.add("hidden");
+    body.classList.remove("disable-scroll");
   });
 
   document.addEventListener("keydown", function (evt) {
     if (evt.key === "Escape") {
       popup.classList.add("hidden");
+      body.classList.remove("disable-scroll");
     }
   });
 
@@ -139,13 +141,25 @@ var popupComments = popup.querySelector(".popup__comments");
 var parentItems = document.querySelector('.starsFeedBack');
 var starsSvg = parentItems.querySelectorAll('svg');
 
+
+
 for (var i = 0; i < starsSvg.length; i++) {
-  starsSvg[i].addEventListener('click', function (evt) {
+  starsSvg[i].addEventListener('mouseenter', function (evt) {
     evt.currentTarget.classList.add('active');
-  
+   
   });
   
 }
+
+for (var i = 0; i < starsSvg.length; i++) {
+  starsSvg[i].addEventListener("click", function (evt) {
+    evt.currentTarget.classList.remove('active');
+  });
+}
+
+
+
+
 
 // -------------------------------------------
 
@@ -163,8 +177,12 @@ setupUserName.value = localStorage.getItem("setupUserName");
     var body = document.querySelector("body");
     if (!setupUserName.value && !popupComments.value) {
    
-      popup.classList.add("hidden");
-      body.classList.remove("disable-scroll");
+      // popup.classList.add("hidden");
+      fieldNotice.style.display = "block";
+      commentNotice.style.display = "block";
+      setupUserName.style.border = "1px solid red";
+      popupComments.style.border = "1px solid red";
+      // body.classList.remove("disable-scroll");
     }  
     else if (!setupUserName.value) {
      setupUserName.style.border = "1px solid red";
